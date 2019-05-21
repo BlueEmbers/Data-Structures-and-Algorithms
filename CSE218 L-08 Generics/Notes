@@ -1,0 +1,23 @@
+. You cannot create an instance of a type parameter
+	T myT = new T();
+	public class MyClass <T> {
+		public MyClass() {
+		T myT = new T();
+	}
+	
+2.You cannot create an array of generic class objects
+
+Point<> [] arr = new Point<>[10];
+
+
+3. A generic class's type parameter cannot be the type of a static field
+and cannot be referenced to in a static method
+
+	public class MyClass<T> {
+	private static T value; // not allowed
+	
+	public static void doSomething() {
+		T myValue;
+	}
+	
+4. You cannot make an exception class
